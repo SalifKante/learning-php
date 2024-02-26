@@ -15,7 +15,7 @@
 
 //String
 $name1 = "Salif Kante";
-$name2 = "John DOe";
+$name2 = "John Doe";
 var_dump($name1);
 echo '<br />';
 
