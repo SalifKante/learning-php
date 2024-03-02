@@ -62,21 +62,21 @@ $listings = [
   </header>
   <div class="container mx-auto p-4 mt-4">
     <!-- Output -->
-    <?php foreach ($listings as $list):?>
+    <?php foreach ($listings as $job):?>
     <div class="md my-4">
       <div class="bg-white rounded-lg shadow-md">
         <div class="p-4">
-          <h2 class="text-xl font-semibold"><?= $list['title'] ?></h2>
-          <p class="text-gray-700 text-lg mt-2"><?= $list['description'] ?></p>
+          <h2 class="text-xl font-semibold"><?= $job['title'] ?></h2>
+          <p class="text-gray-700 text-lg mt-2"><?= $job['description'] ?></p>
           <ul class="mt-4">
             <li class="mb-2">
-              <strong>Salary:</strong> <?= $list['salary'] ?>
+              <strong>Salary:</strong> <?= $job['salary'] ?>
+            </li>
+            <li class="mb-2"> 
+              <strong>Location:</strong> <?= $job['location'] ?>
             </li>
             <li class="mb-2">
-              <strong>Location:</strong> <?= $list['location'] ?>
-            </li>
-            <li class="mb-2">
-              <strong>Tags:</strong> <?= implode(', ',$list['tags']) ?>
+              <strong>Tags:</strong> <?= implode(', ',$job['tags']) ?>
             </li>
           </ul>
         </div>

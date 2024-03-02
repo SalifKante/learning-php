@@ -1,5 +1,11 @@
 <?php
 
+function format($value){
+  echo '<pre>';
+    print_r($value);
+  echo '</pre>';
+}
+
 /*
   Challenge 1: Sum of an array
   
@@ -9,6 +15,16 @@
   5. Print out 'The sum of the {amount} numbers is: {sum} '. For example, if the array is [1, 2, 3, 4, 5], the output should be 'The sum of the 5 numbers is: 15'. 
 */
 echo '<h3>Sum Of An Array</h3>';
+
+$numbers = [1,2,3,4,5];
+
+$sum = array_sum($numbers);
+$sum = $numbers[0] + $numbers[1] + $numbers[2] + $numbers[3] + $numbers[4];
+
+$amount = count($numbers);
+
+echo 'The sum of the '. $amount . ' number is '. $sum;
+
 
 /*
   Challenge 2: Colors array
@@ -24,7 +40,18 @@ You should end up with the following array: ['yellow', 'pink', 'blue', 'red', 'p
 echo '<h3>Colors Array</h3>';
 
 $colors = ['red', 'blue', 'green', 'yellow'];
+$colors = array_reverse($colors);
 
+// $colors[] = 'purple';
+// array_push($colors, 'purple');
+// $colors[] = 'orange';
+
+$colors = array_merge($colors, ['purple', 'orange']);
+$colors[1] = 'pink';
+
+array_pop($colors);
+
+echo format($colors);
 /*
   Challenge 3: Job listings array
 
@@ -35,3 +62,41 @@ $colors = ['red', 'blue', 'green', 'yellow'];
 */
 
 echo '<h3>Job Listings</h3>';
+
+$listing = [
+  ['id' => 1,
+    'job_title' => 'PHP Developer',
+    'company' => 'ABC Company',
+    'contact_email' => 'salif@email.com',
+    'contact_phone' => '123-456-7890',
+    'skills' => ['PHP', 'MySQL', 'JavaScript']
+  ],
+   ['id' => 2,
+    'job_title' => 'Web Designer',
+    'company' => '123 Company',
+    'contact_email' => 'moh@email.com',
+    'contact_phone' => '123-456-7890',
+    'skills' => ['PHP', 'MySQL', 'JavaScript']
+  ], ['id' => 3,
+    'job_title' => 'PHP Developer',
+    'company' => 'ABC Company',
+    'contact_email' => 'john@email.com',
+    'contact_phone' => '123-456-7890',
+    'skills' => ['PHP', 'MySQL', 'JavaScript']
+  ]
+];
+
+array_push($listing,
+  [
+    'id' => 4,
+    'job_title' => 'Graphic Designer',
+    'company' => '123 Company',
+    'contact_email' => 'moh@email.com',
+    'contact_phone' => '123-456-7890',
+    'skills' => ['PHP', 'MySQL', 'JavaScript']
+  ]
+);
+echo $listing[1]['job_title'];
+echo '<br>';
+echo $listing[3]['skills'][0];
+format($listing);
