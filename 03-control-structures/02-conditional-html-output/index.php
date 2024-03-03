@@ -1,5 +1,5 @@
 <?php
-  $isLoggegIn = false;
+  $isLoggegIn = true;
   $name = 'Salif';
 ?>
 <!DOCTYPE html>
