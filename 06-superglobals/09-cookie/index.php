@@ -1,3 +1,7 @@
+<?php
+  setcookie('username', 'kantes', time()+3600, '/');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

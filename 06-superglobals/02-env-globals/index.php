@@ -5,6 +5,7 @@
   $host =getenv('DB_HOST');
   $user =getenv('DB_USER');
 
+  // echo var_dump(getenv());
   // var_dump(getenv());
   $foo = 'Foo Global';
 
