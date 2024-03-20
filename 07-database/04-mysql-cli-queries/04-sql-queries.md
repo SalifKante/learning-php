@@ -16,8 +16,6 @@ mysql -u root -p
 
 This will connect you to the MySQL server as the root user. You will be prompted for your password. If you haven't set a password yet, then you can just press enter. Once you are connected, you can run SQL queries.
 
-We will look at some basic queries here, but I have a MySQL cheat sheet that you can use as a reference. You can find it here: [MySQL Cheat Sheet](https://gist.github.com/bradtraversy/c831baaad44343cc945e76c2e30927b3)
-
 To show the databases on your system:
 
 ```sql
@@ -135,7 +133,7 @@ Notice that post 2 has an id of 3. This is because we deleted post 2. The id is 
 
 If you want to delete a table, you can use the `DROP TABLE` command. This will delete the table and all of the data in it. Be careful with this command. You can't undo it.
 
-I am going to drop the table because O am going to show you how to re-create it using MySQL Workbench in the next lesson. You don't have to if you don't want to.
+I am going to drop the table because I am going to show you how to re-create it using MySQL Workbench in the next lesson. You don't have to if you don't want to.
 
 ```sql
 DROP TABLE posts;

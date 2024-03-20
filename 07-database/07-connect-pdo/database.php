@@ -4,7 +4,7 @@ $host = 'localhost';
 $port = 3306;
 $dbName = 'blog';
 $username = 'root';
-$passwowrd = '';
+$passwowrd = 'Salif123';
 
 $dsn = "mysql:host={$host};port={$port};dbname={$dbName};charset=utf8";
 

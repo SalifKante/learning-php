@@ -9,6 +9,7 @@
     
 
     $sql = 'INSERT INTO posts (title, body) values(:title, :body)';
+    
     $stmt= $pdo->prepare($sql);
     $params = ['title'=>$title,'body'=>$body];
     $stmt->execute($params);

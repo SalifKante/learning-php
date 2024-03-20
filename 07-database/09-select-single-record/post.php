@@ -1,7 +1,7 @@
 <?php
   require 'database.php';
   $id = $_GET['id'] ?? null;
-  // echo $id;
+  echo $id;
   if(!$id){
     header('Location: index.php');
     exit;
